@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mixins</title>
+
+  <link rel="stylesheet" type="text/css" href="content/styles/style.css">
+</head>
+<body>
+<div class="content-container">
+    <div class="row">
+      <div class="grid12">
+        <p><strong>Count list items</strong></p>
+        <ul class="list-counters">
+          <li>Unordered list items</li>
+          <li>Unordered list items</li>
+          <li>Unordered list items</li>
+          <li>Unordered list items</li>
+          <li>Unordered list items</li>
+      </ul>
+      <p><strong>Count paragraphs</strong></p>
+      <div class="paragraph-count">
+        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+        <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. </p>
+      </div>
+      <p><strong>Gradient</strong></p>
+      <div class="gradient-mixin">
+        <p>Horizontal @include background-gradient(#8ad9ef, #009ec3, horizontal);</p>
+      </div>
+      <div class="gradient-mixin vertical">
+        <p>Vertical @include background-gradient(#8ad9ef, #009ec3, vertical);</p>
+      </div>
+      <div class="gradient-mixin radial">
+        <p>Radial @include background-gradient(#8ad9ef, #009ec3, radial);</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

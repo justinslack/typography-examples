@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <title>Form elements</title>
+
+  <link rel="stylesheet" type="text/css" href="content/styles/style.css">
+</head>
+<body>
+  <div class="content-container">
+    <div class="row">
+      <h2>Form elements</h2>
+      <!--Start form HTML-->
+        <form>
+          <fieldset>
+          <p>
+            <label for="text">Text input</label>
+            <input class="text-input" type="text" id="text" placeholder="Text"></input>
+          </p>
+          <hr>
+          <p>
+            <label for="email">Email input</label>
+            <input class="text-input" type="email" id="email" placeholder="mail@mail.com"></input>
+          </p>
+          <hr>
+          <p>
+            <label for="url">Url input</label>
+            <input class="text-input" type="url" id="url" placeholder="http://www.site.co.za"></input>
+          </p>
+          <hr>
+          <p>
+            <label for="number">Number input</label>
+            <input class="text-input" type="number" id="number" placeholder="1000" min="0" max="10000" step="100"></input>
+            <!-- Change range and steps as required -->
+          </p>
+          <hr>
+          <p>
+            <label for="tel">Telephone input</label>
+            <input class="text-input" type="tel" id="tel" placeholder="+27214567890" pattern="^[0-9-+s()]*$"></input>
+            <!-- Change regex pattern to match requirements. Currently all numbers (0-9), the minus symbol (-), the plus symbol (+) as well as spaces (s) and parentheses (()) are allowed. -->
+          </p>
+          <hr>
+          <p>
+            <label for="select">Select input</label>
+            <span class="select-span">
+              <select id="select">
+                <option>Option one</option>
+                <option>Option two</option>
+                <option>Option three</option>
+              </select>
+            </span>
+          </p>
+          <hr>
+          <p>
+          <label>Button</label>
+            <button>Button</button>
+          </p>
+          <hr>
+          <p>
+          <label>Submit input</label>
+            <input type="submit" value="Submit input">
+          </p>
+          <hr>
+          <p>
+           <label>Button input</label>
+            <input type="button" value="Button input">
+          </p>
+          <hr>
+          <p>
+           <label>Button disabled</label>
+            <input type="button" value="Disabled" disabled>
+          </p>
+          </fieldset>
+        </form>
+      <!--End form HTML-->
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="content/scripts/app.min.js"></script>
+
+</body>
+</html>
