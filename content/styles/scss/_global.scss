@@ -1,0 +1,41 @@
+/* Global styles =================================================================================================*/
+
+* {
+  @include border-box;
+}
+
+body {
+  @include font-feature-settings(kern);
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-kerning: normal;
+  font-weight: $base-font-weight;
+  line-height: $line-height;
+  text-rendering: optimizelegibility;
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  color: $link-color;
+}
+
+a:hover {
+  color: $link-hover-color;
+}
+
+.content-container {
+  @extend %clearfix;
+  background-color: white;
+  margin: 15px auto;
+  max-width: 940px;
+  overflow: hidden;
+}

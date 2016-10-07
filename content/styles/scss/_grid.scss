@@ -1,0 +1,93 @@
+/// Grid  ================================================================================================= */
+
+/* Grid elements should be agnostic. If for example padding is required add that to containers inside the grid elements - usually this would be an article, but be careful about proper semantic use of these element.*/
+
+// Grid clearing
+@mixin grid-clear($nth) {
+
+  &:nth-of-type(#{$nth}) {
+    clear: both;
+    margin-left: 0;
+  }
+}
+
+// Set Grid (1170px default)
+$column-width: 60px;
+$gutter: 50px;
+$columns: 12;
+$padding: $gutter;
+
+// Should it be responsive. Mostly yes.
+$responsive: true;
+
+// Set container width based on variables chosen above
+$width: ($column-width * $columns) + ($gutter * ($columns - 1));
+
+// Set Base Container (you can choose any class name here.)
+.row {
+// Set container to max-width if responsive
+@if $responsive == true
+  {
+    max-width: $width;
+  }
+// Set container to width if responsive not required. (This is usually not the case but sometimes a fixed width isn't a bad idea for web apps etc.)
+@else {
+    width: $width;
+    }
+  margin: 1.25em auto; // Will center container and add top and bottom space
+  padding: 0 $padding; // Padding based on variable above
+}
+
+// Define Individual Grid Classes
+@for $i from 1 to $columns
+ {
+  // Calculate grid size in pixels
+  $grid: ($column-width * $i) + ($gutter * ($i - 1));
+
+  // Calculate responsive grid sizes if required
+  @if $responsive == true
+  {
+    // Calculate grid size in pixels
+    $grid: ($grid / $width) * 100%;
+
+    // Get Gutter Percentage for Grids
+    $gutter-percentage: ($gutter / $width) * 100%;
+
+    .grid#{$i}
+      {
+        margin: 20px 0;
+        width: 100%;
+
+      // Breakpoint should be changed based on content needs
+      @include breakpoint(37.5em) {
+        float: left;
+        margin: 0 0 0 $gutter-percentage;
+        width: $grid;
+      }
+    }
+  }
+  @else
+  {
+    $grid: $grid;
+    .grid#{$i}
+      {
+      margin-left: $gutter;
+      width: $grid;
+      }
+  }
+}
+
+.row {
+  @extend %clearfix;
+  position: relative;
+}
+
+.clear {
+  clear: left;
+  margin-left: 0;
+}
+
+div[class*="grid"] {
+  @extend %clearfix;
+  @include grid-clear(1);
+}
