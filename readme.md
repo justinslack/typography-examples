@@ -1,4 +1,4 @@
-# NML front-end framework (bye Bootstrap)
+# Type examples
 
 ## Requirements
 
@@ -15,8 +15,3 @@
 - Run `grunt production` when finished working.
 - Deploy.
 - Prosper.
-
-## SCCS lint
-
-- $ gem install scss_lint
-- $ scss-lint . --config scss-lint.yml
