@@ -44,10 +44,20 @@ div[class*="grid"] {
   list-style: none;
   padding: 0;
 
+  li {
+    margin-bottom: 15px;
+  }
+
   a {
+    display: block;
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
+
+    @include breakpoint(35.313em) {
+      display: inline;
+    }
+
   }
 
 }
@@ -73,7 +83,7 @@ hr {
   margin: 30px 0;
 }
 
-// Typekit
+// Copy
 
 .header-row {
   @include rem('padding', 30px 0 80px);
@@ -86,25 +96,30 @@ hr {
 }
 
 .two-columns {
-  @include rem('padding', 0 80px);
+  @include rem('padding', 0 20px);
+  @include breakpoint(48.063em) {
+    @include rem('padding', 0 80px);
 
-  -moz-column-count: 2;
-  -moz-column-width: 3rem;
-  -moz-column-gap: 5rem;
+    -moz-column-count: 2;
+    -moz-column-width: 3rem;
+    -moz-column-gap: 5rem;
 
-  -webkit-column-count: 2;
-  -webkit-column-width: 3rem;
-  -webkit-column-gap: 5rem;
+    -webkit-column-count: 2;
+    -webkit-column-width: 3rem;
+    -webkit-column-gap: 5rem;
 
-  column-count: 2;
-  column-width: 3rem;
-  column-gap: 5rem;
+    column-count: 2;
+    column-width: 3rem;
+    column-gap: 5rem;
+  }
 
   p {
     @include rem('margin', 0 0 16px);
   }
 
 }
+
+// Typekit
 
 .typekit-header {
   font-family: "ff-tisa-web-pro",serif;
