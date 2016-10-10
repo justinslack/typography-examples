@@ -126,3 +126,22 @@ hr {
   font-weight: 400;
 }
 
+// font face observer
+
+.font-face-observer-header {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.font-face-observer-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+.fonts-loaded {
+  .font-face-observer-header {
+    font-family: "Source Serif Pro", serif;
+  }
+
+  .font-face-observer-body {
+    font-family: "Source Sans Pro", sans-serif;
+  }
+}
