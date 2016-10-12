@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>@font-face example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="content/styles/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    @font-face {
+      font-family: Source Sans Pro;
+      src: /*local("Source Sans Pro"),*/
+        url(content/fonts/sourcesanspro-regular.woff),
+        url(content/fonts/sourcesanspro-regular.woff2);
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Source Sans Pro;
+      src: /*local("Source Sans Pro"),*/
+        url(content/fonts/sourcesanspro-bold.woff),
+        url(content/fonts/sourcesanspro-bold.woff2);
+      font-style:  normal;
+      font-weight: 700;
+      font-display: swap;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="content-container">
+    <div class="row header-row">
+      <header class="main-heading">
+        <h1 class="font-display-header" id="test-header">Jules Verne: <span>Around the World in 80 Days</span></h1>
+      </header>
+      <article class="two-columns font-display-body" id="test">
+        <p>An hour after, the Henrietta passed the lighthouse which marks the entrance of the Hudson, turned the point of Sandy Hook, and put to sea. During the day she skirted Long Island, passed Fire Island, and directed her course rapidly eastward.</p>
+
+        <p>At noon the next day, a man mounted the bridge to ascertain the vessel's position.  It might be thought that this was Captain Speedy. Not the least in the world.  It was Phileas Fogg, Esquire.  As for Captain Speedy, he was shut up in his cabin under lock and key, and was uttering loud cries, which signified an anger at once pardonable and excessive.</p>
+
+        <p>What had happened was very simple.  Phileas Fogg wished to go to Liverpool, but the captain would not carry him there.  Then Phileas Fogg had taken passage for Bordeaux, and, during the thirty hours he had been on board, had so shrewdly managed with his banknotes that the sailors and stokers, who were only an occasional crew, and were not on the best terms with the captain, went over to him in a body.  This was why Phileas Fogg was in command instead of Captain Speedy; why the captain was a prisoner in his cabin; and why, in short, the Henrietta was directing her course towards Liverpool.  It was very clear, to see Mr. Fogg manage the craft, that he had been a sailor.</p>
+
+        <p>How the adventure ended will be seen anon.  Aouda was anxious, though she said nothing.  As for Passepartout, he thought Mr. Fogg's manoeuvre simply glorious.  The captain had said "between eleven and twelve knots," and the Henrietta confirmed his prediction.</p>
+      </article>
+    </div>
+  </div>
+<!--   <script>
+    document.getElementById('test').onclick = function() {
+      this.classList.toggle('font-face-body');
+    }
+
+    document.getElementById('test-header').onclick = function() {
+      this.classList.toggle('font-face-header');
+    }
+  </script> -->
+</body>
+</html>
