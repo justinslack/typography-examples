@@ -81,8 +81,8 @@
     w.Promise
     .all([fontA.check(), fontB.check()])
     .then(function(){
-      w.document.documentElement.className += "fonts-loaded";
       console.log('font has loaded.');
+      w.document.documentElement.className += "fonts-loaded";
     });
   }( this ));
   </script>
