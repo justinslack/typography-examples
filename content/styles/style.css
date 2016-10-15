@@ -574,6 +574,14 @@ hr {
   margin:  0 0 1rem;
 }
 
+.google-fonts-header {
+  font-family: 'Source Serif Pro', serif;
+}
+
+.google-fonts-body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .typekit-header {
   font-family: "ff-tisa-web-pro",serif;
 }
