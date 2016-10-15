@@ -1,0 +1,48 @@
+// Tabs
+
+#tabs {
+  @extend %clearfix;
+}
+
+.tab-controls {
+  @extend %clearfix;
+  border-bottom: 1px solid $link-color;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  li {
+    border-bottom: 0;
+    display: block;
+    float: left;
+    margin: 0 0.25em;
+    position: relative;
+  }
+
+  a {
+    @include border-radius(3px 3px 0 0);
+    border: 1px solid #becbd2;
+    border-bottom: 1px solid $link-color;
+    color: #becbd2;
+    display: block;
+    line-height: 2.5;
+    padding: 0 1.25rem;
+    position: relative;
+    text-decoration: none;
+    top: 1px;
+    white-space: nowrap;
+
+    &.active {
+      border: 1px solid $link-color;
+      border-bottom: 1px solid white;
+      color: #003300;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+}

@@ -1,0 +1,172 @@
+//Demonstration stuff
+
+.row {
+  //margin-bottom: 120px;
+}
+
+.main-header {
+  text-align: center;
+}
+
+
+.content-container {
+  div[class*="grid"] {
+    background-color: lighten(black, 95%);
+
+    div[class*="grid"] {
+      background-color: lighten(black, 88%);
+
+      div[class*="grid"] {
+        background-color: lighten(black, 84%);
+      }
+
+    }
+  }
+}
+
+div[class*="grid"] {
+  p {
+    padding: 1rem;
+  }
+}
+
+.toc-content {
+  width: 750px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.toc {
+  @include font-size(18);
+  margin: 0 auto 40px auto;
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 15px;
+  }
+
+  a {
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include breakpoint(35.313em) {
+      display: inline;
+    }
+
+  }
+
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.fill-grid {
+  //margin:0;
+}
+
+form {
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+hr {
+  background-color: #fff;
+  border: 0;
+  border-top: 1px dashed $border-color;
+  margin: 30px 0;
+}
+
+// Copy
+
+.header-row {
+  @include rem('padding', 30px 0 80px);
+  border-bottom: 1px solid #c1c1c1;
+  border-top: 1px solid #c1c1c1;
+}
+
+.main-heading {
+  @include rem('padding', 0 0 40px)
+}
+
+.two-columns {
+  @include rem('padding', 0 20px);
+  @include breakpoint(48.063em) {
+    @include rem('padding', 0 80px);
+
+    -moz-column-count: 2;
+    -moz-column-width: 3rem;
+    -moz-column-gap: 5rem;
+
+    -webkit-column-count: 2;
+    -webkit-column-width: 3rem;
+    -webkit-column-gap: 5rem;
+
+    column-count: 2;
+    column-width: 3rem;
+    column-gap: 5rem;
+  }
+
+  p {
+    @include rem('margin', 0 0 16px);
+  }
+
+}
+
+// Typekit
+
+.typekit-header {
+  font-family: "ff-tisa-web-pro",serif;
+}
+
+.typekit-body {
+  font-family: "freight-sans-pro", sans-serif;
+}
+
+// @font-face example
+
+.font-face-header {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+}
+
+.font-face-body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+
+// font face observer
+
+.font-face-observer-header {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.font-face-observer-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+.fonts-loaded {
+  .font-face-observer-header {
+    font-family: "Source Serif Pro", serif;
+  }
+
+  .font-face-observer-body {
+    font-family: "Source Sans Pro", sans-serif;
+  }
+}
+
+// FOnt display
+
+.font-display-header {
+  font-family: "Source Serif Pro", Georgia, 'Times New Roman', serif;
+}
+
+.font-display-body {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}

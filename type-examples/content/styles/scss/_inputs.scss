@@ -1,0 +1,114 @@
+//Standard set of styles for common inputs. Make changes as required by design.
+
+form {
+  padding: 0;
+}
+
+fieldset {
+  padding: 0;
+}
+
+label {
+  @include rem('margin', 0 0 8px);
+  display: block;
+}
+
+.text-input,
+textarea {
+  @include border-radius(3px);
+  border: 1px solid $border-color;
+  max-width: 400px;
+  min-width: 300px;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+
+  &:focus {
+    border: 1px solid darken($border-color, 15%);
+  }
+
+}
+
+// Selects
+
+select {
+  @include rem('padding', 7px 36px 7px 8px);
+  @include border-radius(3px);
+  background: transparent;
+  border: 1px solid $border-color;
+  color: #303030;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 7px 8px;
+  padding-right: 36px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 1;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  [disabled] {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+}
+
+.select-span {
+  @include rem('padding', 3px 8px 3px 0);
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  vertical-align: middle;
+
+  &::after {
+    border-style: solid;
+    border-width: 5px 5px 0;
+    border-color: #808080 transparent transparent;
+    content: "";
+    display: block;
+    height: 7px;
+    pointer-events: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 0;
+    z-index: 9999;
+  }
+}
+
+// Buttons
+
+input[type="submit"],
+input[type="button"],
+button {
+  @include rem('padding', 8px 10px);
+  @include border-radius(3px);
+  background-color: $button-color;
+  border: 0;
+  color: white;
+  min-width: 120px;
+
+  &:hover {
+    background-color: $link-hover-color;
+  }
+
+  &.disabled,
+  &[disabled] {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}

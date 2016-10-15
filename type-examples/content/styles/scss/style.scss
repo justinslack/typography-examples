@@ -3,11 +3,11 @@
 @import 'mixins';           // global mixins next to use variables and be accessible to rest of stylesheets
 @import 'typography';       // base typographic system is established next
 @import 'grid';             // grid system functions and mixins will all be defined here
-// @import 'nav';              // simple dropdown menu in css
+@import 'nav';              // simple dropdown menu in css
 @import 'global';           // global style rules are defined last so they can use all the previous sheets
 @import 'demo';             // demo style rules for styleguide. Remove from final build
-// @import 'inputs';           // simple dropdown menu in css
-// @import 'tables';           // table styles
-// @import 'tabs';             // tab styles
-// @import 'miscellaneous';    // miscellaneous elements  styles
-// @import 'prism';            // syntax highlight styles if required
+@import 'inputs';           // simple dropdown menu in css
+@import 'tables';           // table styles
+@import 'tabs';             // tab styles
+@import 'miscellaneous';    // miscellaneous elements  styles
+@import 'prism';            // syntax highlight styles if required

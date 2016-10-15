@@ -1,0 +1,131 @@
+nav {
+  margin-top:15px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+}
+
+.menu {
+  @extend %clearfix;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  // Top level
+  > li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    &:hover {
+      background:#f6f6f6;
+    }
+
+    &.current-menu-item {
+      background:#ddd;
+    }
+
+    > a {
+      text-transform: uppercase;
+    }
+
+    a {
+      display: block;
+      font-weight: 400;
+      line-height: 32px;
+      padding: 0 15px;
+      text-decoration: none;
+    }
+  }
+
+  // First dropdown level
+  ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: lighten(black, 95%);
+    padding: 0;
+    z-index: 9999;
+
+    li {
+      float: none;
+      width: 200px;
+      position: relative;
+    }
+
+    a {
+      line-height: 120%;
+      padding: 10px 15px;
+    }
+
+    ul {
+      top: 0;
+      left: 100%;
+    }
+
+  }
+
+}
+
+
+// Make them show
+.menu li:hover > ul {
+  display:block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background: #19c589;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+/*Hide checkbox*/
+input[type=checkbox]{
+  display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ .menu {
+  display: block;
+}
+
+@media screen and (max-width : 760px){
+  /*Make dropdown links appear inline*/
+  ul {
+    position: static;
+    display: none;
+  }
+  /*Create vertical spacing*/
+  li {
+    margin-bottom: 1px;
+  }
+  /*Make all menu links full width and center the text*/
+  ul li, li a, li ul {
+    width: 100%;
+  }
+  li ul li a {
+    text-align:center;
+  }
+
+  /*Display 'show menu' link*/
+  .show-menu {
+    display:block;
+  }
+  /*Pointer on Hover, so that the user knows of an active link*/
+  .show-menu:hover {
+    cursor:pointer;
+  }
+  /*Center the text*/
+  li ul li a {
+    text-align:center;
+  }
+
+}
